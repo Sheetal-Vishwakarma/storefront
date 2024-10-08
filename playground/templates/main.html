@@ -1,0 +1,492 @@
+{% load static %}
+{% load custom_filters %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>{{ page}}</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="{% static 'assets/img/favicon.png' %}" rel="icon">
+  <link href="{% static 'assets/img/apple-touch-icon.png' %}" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="{% static 'assets/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/aos/aos.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="{% static 'assets/css/main.css' %}" rel="stylesheet">
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <!-- Optional theme -->
+  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">   -->
+  <!-- =======================================================
+  * Template Name: Arsha
+  * Template URL: https://bootstrapmade.com/arsha-free-bootstrap-html-template-corporate/
+  * Updated: Jun 29 2024 with Bootstrap v5.3.3
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body class="{{ body_class }}">
+
+  <header id="header" class="{{ header_class }}">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center">
+
+      <a href="index.html" class="logo d-flex align-items-center me-auto">
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+        <!-- <img src="assets/img/logo.png" alt=""> -->
+        <h1 class="sitename">Blog</h1>
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="/#hero" class="active">Home</a></li>
+          <li><a href="/#parse_resume">Resume Parsing</a></li>
+          <li><a href="/#about">About</a></li>
+          <li><a href="/#services">Services</a></li>
+          <li><a href="/#portfolio">Portfolio</a></li>
+          <li><a href="/#team">Team</a></li>
+          <li class="d-none"><a href="/#pricing">Pricing</a></li>
+          <li class="dropdown"><a href="#"><span>Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li><a href="#">Dropdown 1</a></li>
+              <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                <ul>
+                  <li><a href="#">Deep Dropdown 1</a></li>
+                  <li><a href="#">Deep Dropdown 2</a></li>
+                  <li><a href="#">Deep Dropdown 3</a></li>
+                  <li><a href="#">Deep Dropdown 4</a></li>
+                  <li><a href="#">Deep Dropdown 5</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Dropdown 2</a></li>
+              <li><a href="#">Dropdown 3</a></li>
+              <li><a href="#">Dropdown 4</a></li>
+            </ul>
+          </li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+      <a class="btn-getstarted" href="#about">Get Started</a>
+
+    </div>
+  </header>
+
+  {% block start %}
+
+  {% endblock %}
+<!-- Button trigger modal -->
+<!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+  Launch demo modal
+</button> -->
+
+<!-- Modal -->
+<!-- <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div> -->
+  <footer id="footer" class="footer">
+
+    <div class="footer-newsletter" id="parse_resume">
+        <div class="container">
+          <div class="row justify-content-center text-center">
+            <div class="col-lg-6">
+              <h4>Resume Parsing</h4>
+              
+              <form action="/resume_parsing/" enctype="multipart/form-data" method="post" class="php-email-form" id="php-resume-parsing-form">
+                {% csrf_token %}
+                <div class="newsletter-form"><input type="file" name="document" id="document" placeholder="Please choose File">
+                  <input type="submit" value="Parse Resume" name="parse_submit_btn" class="parse_submit_btn" {% if resume_extracted_data.is_resume_data %} disabled  {% endif %}>
+                  {% if resume_extracted_data.is_resume_data %}  
+                    <!-- modal button-->
+                    <button type="button" class="parsed_resume_button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg">Extracted Data</button>
+                    <button type="button" onclick="location.href = '/#parse_resume'" class="parsed_resume_button" class="btn btn-primary">Reset</button>
+                  {% endif %}  
+                </div>
+                <div class="loading2 d-none">Loading...</div>
+                <div class="error-message2"></div>
+                  <div class="sent-message2 d-none">Your subscription request has been sent. Thank you!</div>
+                
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    <div class="footer-newsletter">
+      <div class="container">
+        <div class="row justify-content-center text-center">
+          <div class="col-lg-6">
+            <h4>Join Our Newsletter</h4>
+            <p>Subscribe to our newsletter and receive the latest news about our products and services!</p>
+            <form action="/insert_newsletter/" method="post" class="php-email-form" id="php-newsletter-form">
+              <div class="newsletter-form"><input type="email" name="newsletter_email" id="newsletter_email" placeholder="Enter your email id">
+              <input type="button" value="Subscribe" name="newletter_submit_btn" id="newletter_submit_btn"></div>
+              <div class="loading1">Loading...</div>
+              <div class="error-message1"></div>
+                <div class="sent-message1">Your subscription request has been sent. Thank you!</div>
+              
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container footer-top">
+      <div class="row gy-4">
+        <div class="col-lg-4 col-md-6 footer-about">
+          <a href="/" class="d-flex align-items-center">
+            <span class="sitename">Blog</span>
+          </a>
+          <div class="footer-contact pt-3">
+            <p>{{ 'Office No. 504/5th, Senapati Bapat Marg' | lower }}</p>
+            <p>Railway Colony, Lower Parel, Mumbai, MH 400013</p>
+            <p class="mt-3"><strong>Phone:</strong> <span>+1 5589 55488 55</span></p>
+            <p><strong>Email:</strong> <span>info@example.com</span></p>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Useful Links</h4>
+          <ul>
+            <li><i class="bi bi-chevron-right"></i> <a href="#">Home</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="#">About us</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="#">Services</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="#">Terms of service</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Our Services</h4>
+          <ul>
+            <li><i class="bi bi-chevron-right"></i> <a href="#">Web Design</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="#">Web Development</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="#">Product Management</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="#">Marketing</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-4 col-md-12">
+          <h4>Follow Us</h4>
+          <p>Tomorrow fermentum hate eu feugiat lide par naso tierra videa magna derita valies</p>
+          <div class="social-links d-flex">
+            <a href=""><i class="bi bi-twitter-x"></i></a>
+            <a href=""><i class="bi bi-facebook"></i></a>
+            <a href=""><i class="bi bi-instagram"></i></a>
+            <a href=""><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="container copyright text-center mt-4">
+      <p>© <span>Copyright</span> <strong class="px-1 sitename">Blog</strong> <span>All Rights Reserved</span></p>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you've purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
+        Designed by <a href="#">Sheetal V</a>
+      </div>
+    </div>
+
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="{% static 'assets/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <!-- <script src="{% static 'assets/vendor/php-email-form/validate.js' %}"></script> -->
+  <script src="{% static 'assets/vendor/aos/aos.js' %}"></script>
+  <script src="{% static 'assets/vendor/glightbox/js/glightbox.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/swiper/swiper-bundle.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/waypoints/noframework.waypoints.js' %}"></script>
+  <script src="{% static 'assets/vendor/imagesloaded/imagesloaded.pkgd.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/isotope-layout/isotope.pkgd.min.js' %}"></script>
+
+  <!-- Main JS File -->
+  <script src="{% static 'assets/js/main.js' %}"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/aes.js" integrity="sha256-/H4YS+7aYb9kJ5OKhFYPUjSJdrtV6AeyJOtTkw6X72o=" crossorigin="anonymous"></script>
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+  <script>
+    var encrypted = CryptoJS.AES.encrypt("Sheetal", "U2FsdGVkX18ZUVvShFSES21qHsQEqZXMxQ9zgHy+bu0=");
+//U2FsdGVkX18ZUVvShFSES21qHsQEqZXMxQ9zgHy+bu0=
+
+// var decrypted = CryptoJS.AES.decrypt(encrypted, "U2FsdGVkX18ZUVvShFSES21qHsQEqZXMxQ9zgHy+bu0=");
+
+// console.log('Encrypted text Sheetal');
+// console.log('decrypted '+decrypted.toString(CryptoJS.enc.Utf8));
+
+    $(document).on('click','#submit_contact_btn',function(){
+      var data_obj = {};
+      var error = 0;
+      var i=0;
+      data_obj.csrfmiddlewaretoken = '{{ csrf_token }}';
+      if($("#name-field").val()==''){
+        error++;
+      }
+      if($("#email-field").val()==''){
+        error++;
+      }
+      if($("#subject-field").val()==''){
+        error++;
+      }
+      if($("#message-field").val()==''){
+        error++;
+      }
+      //validation for form fields
+      if(error>0){
+        $('.php-email-form .sent-message').css('display','none');
+        $('.php-email-form .error-message').html('');
+        $('.php-email-form .error-message').html('Please enter required details');
+        $('.php-email-form .error-message').css('display','block');
+        $('.php-email-form .loading').css('display','none');
+        
+        setTimeout(function() {
+          $('#php-email-form .error-message').fadeOut('slow');
+        }, 5000);
+        window.location.href = '#contact';
+        return false;
+      }
+      data_obj.name = $("#name-field").val();
+      data_obj.email = $("#email-field").val();
+      data_obj.subject = $("#subject-field").val();
+      data_obj.message = $("#message-field").val();
+      $.ajax({
+        type:"POST",
+        url: "/insert_contact_form/",       
+        data: data_obj,
+        beforeSend: function() {
+            // setting a timeout
+            $('.php-email-form .loading').css('display','block');
+            $('.php-email-form .sent-message').css('display','none');
+                $('.php-email-form .error-message').css('display','none');
+            i++;
+        },
+        success: function(data){   
+            if(data=="success"){
+                $("#php-email-form")[0].reset();
+                $('.php-email-form .sent-message').css('display','block');
+                $('.php-email-form .error-message').css('display','none');
+                $('.php-email-form .loading').css('display','none');
+                setTimeout(function() {
+                  $('#php-email-form .sent-message').fadeOut('slow');
+                }, 3000); 
+            } else{                
+                $('.php-email-form .sent-message').css('display','none');
+                $('.php-email-form .error-message').css('display','block');
+                $('.php-email-form .loading').css('display','none');
+                setTimeout(function() {
+                  $('#php-email-form .error-message').fadeOut('slow');
+                }, 5000);
+            }
+            console.log(data);            
+        }
+      });
+    });
+    
+    // Submit the newsletter form
+    $(document).on('click','#newletter_submit_btn',function(){
+        var error = 0;
+        var data_obj = {};
+        data_obj.csrfmiddlewaretoken = '{{ csrf_token }}';
+        var email = $("#newsletter_email").val();
+        console.log('email :'.email);
+        if(email=='' || email==undefined){
+          error++;
+        }
+        if(error>0){
+          $('#php-newsletter-form .sent-message1').css('display','none');
+          $('#php-newsletter-form .error-message1').html('');
+          $('#php-newsletter-form .error-message1').html('Please enter your email id');
+          $('#php-newsletter-form .error-message1').css('display','block');
+          $('#php-newsletter-form .loading1').css('display','none');
+          
+          setTimeout(function() {
+            $('#php-newsletter-form .error-message1').fadeOut('slow');
+            $('#newletter_submit_btn').prop('disabled', false);
+          }, 5000);
+          window.location.href = '#footer';
+          return false;
+        }
+        if(checkEmail(email)==false){
+            $('#php-newsletter-form .sent-message1').css('display','none');
+            $('#php-newsletter-form .error-message1').css('display','block');
+            $('#php-newsletter-form .error-message1').html('');
+            $('#php-newsletter-form .error-message1').html('Please enter valid email');
+            $('#php-newsletter-form .loading1').css('display','none');
+            setTimeout(function() {
+              $('#php-newsletter-form .error-message1').fadeOut('slow');
+              $('#newletter_submit_btn').prop('disabled', false);
+            }, 5000);
+            window.location.href = '#footer';
+            return false;
+        }
+        data_obj.email = email;
+        if(error==0){
+            $.ajax({
+              type:"POST",
+              url: "/insert_newsletter_form/",       
+              data: data_obj,
+              beforeSend: function() {
+                  // setting a timeout
+                  $('#php-newsletter-form .loading1').css('display','block');
+                  $('#php-newsletter-form .sent-message1').css('display','none');
+                  $('#php-newsletter-form .error-message1').css('display','none');
+                  $('#newletter_submit_btn').prop('disabled', true);         
+              },
+              success: function(data){
+                  if(data=="success"){
+                      $("#php-newsletter-form")[0].reset();
+                      $('#php-newsletter-form .sent-message1').css('display','block');
+                      $('#php-newsletter-form .error-message1').css('display','none');
+                      $('#php-newsletter-form .loading1').css('display','none');
+                      setTimeout(function() {
+                        $('#php-newsletter-form .sent-message1').fadeOut('slow');
+                      }, 3000);
+                      $('#newletter_submit_btn').prop('disabled', false); 
+                  } else if (data=='duplicate') {
+                      $('#php-newsletter-form .sent-message1').css('display','none');
+                      $('#php-newsletter-form .error-message1').html('');
+                      $('#php-newsletter-form .error-message1').html('This email id already subscribed');
+                      $('#php-newsletter-form .error-message1').css('display','block');
+                      $('#php-newsletter-form .loading1').css('display','none');
+                      setTimeout(function() {
+                        $('#php-newsletter-form .error-message1').fadeOut('slow');
+                        $('#newletter_submit_btn').prop('disabled', false);
+                      }, 5000);
+                  }
+                  else{                
+                      $('#php-newsletter-form .sent-message1').css('display','none');
+                      $('#php-newsletter-form .error-message1').css('display','block');
+                      $('#php-newsletter-form .loading1').css('display','none');
+                      setTimeout(function() {
+                        $('#php-newsletter-form .error-message1').fadeOut('slow');
+                        $('#newletter_submit_btn').prop('disabled', false);
+                      }, 5000);
+                  }
+                  console.log(data);            
+              }
+           });
+        }
+    });
+
+    $(function() {
+        // setTimeout() function will be fired after page is loaded
+        // it will wait for 5 sec. and then will fire
+        // $("#successMessage").hide() function
+        setTimeout(function() {
+            $(".php-email-form .sent-message").hide('blind', {}, 500)
+        }, 3000);
+    });
+
+    function checkEmail(email) {
+      var pattern = /^\b[A-Z0-9._%-]+@[A-Z0-9.-]+\.[A-Z]{2,4}\b$/i
+      if(!pattern.test(email)){
+        return false;
+      }
+      else {
+        return true;
+      }
+    }
+    // console.log(document.location.pathname);
+
+    if (document.location.pathname == "/resume_parsing/" || window.location.hash == "#parse_resume") {      
+      // do some special stuff on this page!
+      $(document).ready(function(){
+        var speed = 1000;
+        // check for hash and if div exist... scroll to div
+        var hash = window.location.hash;
+        if($(hash).length) scrollToID(hash, speed); 
+
+        // scroll to div on nav click        
+        var id = "#parse_resume";
+        if($(id ).length) scrollToID(id, speed);        
+      });
+    }    
+    function scrollToID(id, speed) {
+        console.log(id);
+        var offSet = 350;
+        var obj = $(id).offset();
+        var targetOffset = obj.top - offSet;
+        $('html,body').animate({ scrollTop: targetOffset }, speed);
+      //   $('html, body').animate({
+      //   scrollTop: $("#parse_resume").offset().top
+      // }, 2000);
+    }
+    var loader = '<div id="preloader"></div>';
+    //scroll-top
+
+    $(document).on('click','#search_skill',function(e){
+      var search_input = $("#search_input").val();
+      var resume_skill = $("#resume_skill").val();
+      var error = 0;
+        var data_obj = {};
+        data_obj.csrfmiddlewaretoken = '{{ csrf_token }}';
+        data_obj.search_input = search_input;
+        data_obj.resume_skill = resume_skill;
+        if(search_input=='' || search_input==undefined){
+          error++;
+        }
+        if(error>0){
+          $("#search_err").removeClass('d-none');
+        } else {
+          $.ajax({
+            type:"POST",
+            url: "/search_resume_skill/",       
+            data: data_obj,
+            success: function(data){
+                if(data=="success"){
+                    //Search result found
+                } else {
+                    //No data found
+                }
+                console.log(data);            
+            }
+         });
+        }
+       
+    });
+  </script>
+</body>
+
+</html>

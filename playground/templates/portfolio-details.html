@@ -1,0 +1,116 @@
+
+{% extends "main.html" %}
+
+{% load static %}
+{% load custom_filters %}
+
+  {% block start %}
+  <main class="main">
+    
+    <!-- Page Title -->
+    <div class="page-title" data-aos="fade">
+      <div class="container">
+        <nav class="breadcrumbs">
+          <ol>
+            <li><a href="/">Home</a></li>
+            <li><a href="/#portfolio">Portfolio Details</a></li>
+            <li class="current">{% if portfolio %} {{ portfolio.category }} {% else %} No Data {% endif %}</li>
+          </ol>
+        </nav>
+        <h1>Portfolio Details</h1>
+      </div>
+    </div><!-- End Page Title -->
+    {% if not portfolio %}
+      <div style="height: auto;">
+        <div class="text-center" style="padding: 40px;">
+          <img src="{% static 'assets/img/icons/no-data-found.png' %}" height="100px" width="100px">
+          <h3>Details not available</h3>
+        </div>
+      </div>
+    {% else %}
+    <!-- Portfolio Details Section -->
+    <section id="portfolio-details" class="portfolio-details section">
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-8">
+            <div class="portfolio-details-slider swiper init-swiper">
+
+              <script type="application/json" class="swiper-config">
+                {
+                  "loop": true,
+                  "speed": 600,
+                  "autoplay": {
+                    "delay": 5000
+                  },
+                  "slidesPerView": "auto",
+                  "pagination": {
+                    "el": ".swiper-pagination",
+                    "type": "bullets",
+                    "clickable": true
+                  }
+                }
+              </script>
+
+              <div class="swiper-wrapper align-items-center">
+                {% if portfolio.image_1|length > 0 %}
+                <div class="swiper-slide">
+                  <img src="{% static 'assets/img/portfolio/' %}{{portfolio.image_1}}" alt="" style="height: 552px;">
+                </div>
+                {% endif %}
+
+                {% if portfolio.image_2|length > 0 %}
+                <div class="swiper-slide">
+                  <img src="{% static 'assets/img/portfolio/' %}{{portfolio.image_2}}" alt="" style="height: 552px;">
+                </div>
+                {% endif %}
+
+                {% if portfolio.image_3|length > 0 %}
+                <div class="swiper-slide">
+                  <img src="{% static 'assets/img/portfolio/' %}{{portfolio.image_3}}" alt="" style="height: 552px;">
+                </div>
+                {% endif %}
+                <!-- <div class="swiper-slide">
+                  <img src="{% static 'assets/img/portfolio/product-1.jpg' %}" alt="">
+                </div>
+
+                <div class="swiper-slide">
+                  <img src="{% static 'assets/img/portfolio/branding-1.jpg' %}" alt="">
+                </div>
+
+                <div class="swiper-slide">
+                  <img src="{% static 'assets/img/portfolio/books-1.jpg' %}" alt="">
+                </div> -->
+
+              </div>
+              <div class="swiper-pagination"></div>
+            </div>
+          </div>
+
+          <div class="col-lg-4">
+            <div class="portfolio-info" data-aos="fade-up" data-aos-delay="200">
+              <h3>{{ portfolio.type}} information</h3>
+              <ul>
+                <li><strong>Category</strong>: {{ portfolio.category}}</li>
+                <li><strong>Client</strong>: {{ portfolio.client }}</li>
+                <li><strong>Project date</strong>: {{ portfolio.project_date }}</li>
+                <li><strong>Project URL</strong>: <a href="{{ portfolio.project_url}}" target="_blank"> {{ portfolio.type}} Url</a></li>
+              </ul>
+            </div>
+            <div class="portfolio-description" data-aos="fade-up" data-aos-delay="300">
+              <h2>{{ portfolio.short_description }}</h2>
+              <p>
+                {{ portfolio.long_description }}
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section><!-- /Portfolio Details Section -->
+    {% endif %}
+  </main>
+
+  {% endblock %}
