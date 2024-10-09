@@ -40,9 +40,18 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'playground',
     'rest_framework',
-    'api'
+    'api',
+    'rest_framework.authtoken'
     # 'debug_toolbar'
 ]
+
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework.authentication.TokenAuthentication',
+        'rest_framework.authentication.BasicAuthentication',
+        'rest_framework.authentication.SessionAuthentication',
+    ]
+}
 
 MIDDLEWARE = [
     # "debug_toolbar.middleware.DebugToolbarMiddleware",
